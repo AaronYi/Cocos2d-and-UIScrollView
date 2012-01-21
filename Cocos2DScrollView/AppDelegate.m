@@ -7,21 +7,85 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import "cocos2d.h"
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize window;
+@synthesize viewController;
 
+- (void) removeStartupFlicker
+{
+	//
+	// THIS CODE REMOVES THE STARTUP FLICKER
+	//
+	// Uncomment the following code if you Application only supports landscape mode
+	//
+#if GAME_AUTOROTATION == kGameAutorotationUIViewController
+    
+    //	CC_ENABLE_DEFAULT_GL_STATES();
+    //	CCDirector *director = [CCDirector sharedDirector];
+    //	CGSize size = [director winSize];
+    //	CCSprite *sprite = [CCSprite spriteWithFile:@"Default.png"];
+    //	sprite.position = ccp(size.width/2, size.height/2);
+    //	sprite.rotation = -90;
+    //	[sprite visit];
+    //	[[director openGLView] swapBuffers];
+    //	CC_ENABLE_DEFAULT_GL_STATES();
+	
+#endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    // Init the window
+	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	// Try to use CADisplayLink director
+	// if it fails (SDK < 3.1) use the default director
+	//if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
+	//	[CCDirector setDirectorType:kCCDirectorTypeDefault];
+	
+	
+	CCDirector *director = [CCDirector sharedDirector];
+	
+	// Init the View Controller
+	viewController = [[ViewController alloc] init];
+	viewController.wantsFullScreenLayout = YES;
+    //NSLog(@"window bounds: %f, %f", [window bounds].size.width, [window bounds].size.height);
+	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
+								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
+								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
+						];
+	
+	// attach the openglView to the director
+	[director setOpenGLView:glView];
+	
+    //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
+	if( ! [director enableRetinaDisplay:YES] )
+		CCLOG(@"Retina Display Not supported");
+	
+	//[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+    [director setAnimationInterval:1.0/60];
+	[director setDisplayStats:kCCDirectorStatsFPS];
+	
+	
+	// make the OpenGLView a child of the view controller
+	//[viewController setView:glView];
+	
+	// make the View Controller a child of the main window
+	[window addSubview: viewController.view];
+	
+	[window makeKeyAndVisible];
+	
+	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
+	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
+	// You can change anytime.
+	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA4444];
+    //[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+	
+	// Removes the startup flicker
+	[self removeStartupFlicker];
     return YES;
 }
 

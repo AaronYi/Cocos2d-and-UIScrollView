@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "cocos2d.h"
+#import "CCScrollView.h"
+#import "HelloWorld.h"
 
 @implementation ViewController
+@synthesize cocosView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -18,14 +22,36 @@
 
 #pragma mark - View lifecycle
 
+#pragma mark - View lifecycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	CCDirector *director = [CCDirector sharedDirector];    
+    
+	// Turn on multiple touches
+	EAGLView *eaglView = [director openGLView];
+	[eaglView setMultipleTouchEnabled:YES];
+    
+    scrollView = [[CCScrollView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    scrollView.contentSize = CGSizeMake(640, 960);
+    [scrollView setUserInteractionEnabled:TRUE];
+    [scrollView setScrollEnabled:TRUE];
+    [scrollView setDelegate:(id<UIScrollViewDelegate>)scrollView];
+    [self.view addSubview:scrollView];
+	[cocosView addSubview:eaglView];
+
+    CCScene *scene = [CCScene node];
+    
+	CCLayer *layer = [HelloWorld node];
+	[scene addChild:layer];
+    [director runWithScene: scene];
+
 }
+
 
 - (void)viewDidUnload
 {
+    [self setCocosView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -53,7 +79,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 

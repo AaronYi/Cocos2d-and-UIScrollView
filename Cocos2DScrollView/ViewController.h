@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    UIScrollView *scrollView;
+}
+
+@property (strong, nonatomic) IBOutlet UIView *cocosView;
 
 @end
