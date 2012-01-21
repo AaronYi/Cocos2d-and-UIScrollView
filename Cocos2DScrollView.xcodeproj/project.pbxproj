@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6541BE3614CB3CFF00194FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3514CB3CFF00194FB3 /* UIKit.framework */; };
+		6541BE3814CB3CFF00194FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3714CB3CFF00194FB3 /* Foundation.framework */; };
+		6541BE3A14CB3CFF00194FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3914CB3CFF00194FB3 /* CoreGraphics.framework */; };
+		6541BE4014CB3CFF00194FB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6541BE3E14CB3CFF00194FB3 /* InfoPlist.strings */; };
+		6541BE4214CB3CFF00194FB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541BE4114CB3CFF00194FB3 /* main.m */; };
+		6541BE4614CB3CFF00194FB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541BE4514CB3CFF00194FB3 /* AppDelegate.m */; };
+		6541BE4914CB3CFF00194FB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6541BE4814CB3CFF00194FB3 /* ViewController.m */; };
+		6541BE4C14CB3CFF00194FB3 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6541BE4A14CB3CFF00194FB3 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6541BE3114CB3CFF00194FB3 /* Cocos2DScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2DScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6541BE3514CB3CFF00194FB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6541BE3714CB3CFF00194FB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6541BE3914CB3CFF00194FB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6541BE3D14CB3CFF00194FB3 /* Cocos2DScrollView-Info.plist */ = {isa = PBXFileReference; path = "Cocos2DScrollView-Info.plist"; sourceTree = "<group>"; };
+		6541BE3F14CB3CFF00194FB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6541BE4114CB3CFF00194FB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6541BE4314CB3CFF00194FB3 /* Cocos2DScrollView-Prefix.pch */ = {isa = PBXFileReference; path = "Cocos2DScrollView-Prefix.pch"; sourceTree = "<group>"; };
+		6541BE4414CB3CFF00194FB3 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6541BE4514CB3CFF00194FB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6541BE4714CB3CFF00194FB3 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		6541BE4814CB3CFF00194FB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6541BE4B14CB3CFF00194FB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6541BE2E14CB3CFF00194FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6541BE3614CB3CFF00194FB3 /* UIKit.framework in Frameworks */,
+				6541BE3814CB3CFF00194FB3 /* Foundation.framework in Frameworks */,
+				6541BE3A14CB3CFF00194FB3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6541BE2614CB3CFF00194FB3 = {
+			isa = PBXGroup;
+			children = (
+				6541BE3B14CB3CFF00194FB3 /* Cocos2DScrollView */,
+				6541BE3414CB3CFF00194FB3 /* Frameworks */,
+				6541BE3214CB3CFF00194FB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6541BE3214CB3CFF00194FB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6541BE3114CB3CFF00194FB3 /* Cocos2DScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6541BE3414CB3CFF00194FB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6541BE3514CB3CFF00194FB3 /* UIKit.framework */,
+				6541BE3714CB3CFF00194FB3 /* Foundation.framework */,
+				6541BE3914CB3CFF00194FB3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6541BE3B14CB3CFF00194FB3 /* Cocos2DScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6541BE4414CB3CFF00194FB3 /* AppDelegate.h */,
+				6541BE4514CB3CFF00194FB3 /* AppDelegate.m */,
+				6541BE4714CB3CFF00194FB3 /* ViewController.h */,
+				6541BE4814CB3CFF00194FB3 /* ViewController.m */,
+				6541BE4A14CB3CFF00194FB3 /* ViewController.xib */,
+				6541BE3C14CB3CFF00194FB3 /* Supporting Files */,
+			);
+			path = Cocos2DScrollView;
+			sourceTree = "<group>";
+		};
+		6541BE3C14CB3CFF00194FB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6541BE3D14CB3CFF00194FB3 /* Cocos2DScrollView-Info.plist */,
+				6541BE3E14CB3CFF00194FB3 /* InfoPlist.strings */,
+				6541BE4114CB3CFF00194FB3 /* main.m */,
+				6541BE4314CB3CFF00194FB3 /* Cocos2DScrollView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6541BE3014CB3CFF00194FB3 /* Cocos2DScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6541BE4F14CB3CFF00194FB3 /* Build configuration list for PBXNativeTarget "Cocos2DScrollView" */;
+			buildPhases = (
+				6541BE2D14CB3CFF00194FB3 /* Sources */,
+				6541BE2E14CB3CFF00194FB3 /* Frameworks */,
+				6541BE2F14CB3CFF00194FB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cocos2DScrollView;
+			productName = Cocos2DScrollView;
+			productReference = 6541BE3114CB3CFF00194FB3 /* Cocos2DScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6541BE2814CB3CFF00194FB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 6541BE2B14CB3CFF00194FB3 /* Build configuration list for PBXProject "Cocos2DScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6541BE2614CB3CFF00194FB3;
+			productRefGroup = 6541BE3214CB3CFF00194FB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6541BE3014CB3CFF00194FB3 /* Cocos2DScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6541BE2F14CB3CFF00194FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6541BE4014CB3CFF00194FB3 /* InfoPlist.strings in Resources */,
+				6541BE4C14CB3CFF00194FB3 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6541BE2D14CB3CFF00194FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6541BE4214CB3CFF00194FB3 /* main.m in Sources */,
+				6541BE4614CB3CFF00194FB3 /* AppDelegate.m in Sources */,
+				6541BE4914CB3CFF00194FB3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6541BE3E14CB3CFF00194FB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6541BE3F14CB3CFF00194FB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6541BE4A14CB3CFF00194FB3 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6541BE4B14CB3CFF00194FB3 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6541BE4D14CB3CFF00194FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6541BE4E14CB3CFF00194FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6541BE5014CB3CFF00194FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cocos2DScrollView/Cocos2DScrollView-Prefix.pch";
+				INFOPLIST_FILE = "Cocos2DScrollView/Cocos2DScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6541BE5114CB3CFF00194FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cocos2DScrollView/Cocos2DScrollView-Prefix.pch";
+				INFOPLIST_FILE = "Cocos2DScrollView/Cocos2DScrollView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6541BE2B14CB3CFF00194FB3 /* Build configuration list for PBXProject "Cocos2DScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6541BE4D14CB3CFF00194FB3 /* Debug */,
+				6541BE4E14CB3CFF00194FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6541BE4F14CB3CFF00194FB3 /* Build configuration list for PBXNativeTarget "Cocos2DScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6541BE5014CB3CFF00194FB3 /* Debug */,
+				6541BE5114CB3CFF00194FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6541BE2814CB3CFF00194FB3 /* Project object */;
+}
