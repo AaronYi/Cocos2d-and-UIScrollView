@@ -1,0 +1,15 @@
+This is a way to get UIScrollView working with Cocos2D. It is shown here working on Cocos2D-2.0-Beta with ARC Support. You can also use this code if you want to load the GLView using a NIB file.
+
+This repository does not contain the Cocos2D Sources, you will have to download them and import it into the project. Follow the instructions under the "Getting Started" section of http://www.raywenderlich.com/6804/how-to-make-a-multi-directional-scrolling-shooter-part-1
+
+Also, make sure to copy the shader files and also copy them to the bundle resources (in XCode's project Build Phases).
+
+One important thing to note is that you have to change a line in the CCDirectorIOS implementation file. Find this line:
+
+[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];	
+
+and replace it with this:
+
+[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+
+This will allow your scene to move around as you're scrolling the screen. The contentSize of the scrollView is set at (481,321) for demo purposes. Change this to whatever you require.
