@@ -16,6 +16,9 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
 		label.position =  ccp( size.width /2 , size.height/2 );
 		[self addChild: label];
+        CCAction *rotateAction = [CCRotateBy actionWithDuration:4 angle:360];
+        id rotateActionForever = [CCRepeatForever actionWithAction:rotateAction];
+        [label runAction:rotateActionForever];
 	}
 	return self;
 }

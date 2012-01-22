@@ -14,6 +14,15 @@
 @implementation ViewController
 @synthesize cocosView;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -33,7 +42,7 @@
 	[eaglView setMultipleTouchEnabled:YES];
     
     scrollView = [[CCScrollView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
-    scrollView.contentSize = CGSizeMake(640, 960);
+    scrollView.contentSize = CGSizeMake(321, 481);
     [scrollView setUserInteractionEnabled:TRUE];
     [scrollView setScrollEnabled:TRUE];
     [scrollView setDelegate:(id<UIScrollViewDelegate>)scrollView];

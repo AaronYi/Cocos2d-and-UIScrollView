@@ -1299,6 +1299,7 @@
 				6541BE5114CB3CFF00194FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
