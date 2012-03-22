@@ -7,9 +7,13 @@
 //
 
 #import "cocos2d.h"
+#import "HUDLayer.h"
 
-@interface HelloWorld : CCLayer
+@interface HelloWorld : CCScene
 {
-    
+    HUDLayer *_hud;
+
 }
+-(id)initWithHUD:(HUDLayer *)hud;
++(id) scene;
 @end

@@ -49,12 +49,13 @@
     [self.view addSubview:scrollView];
 	[cocosView addSubview:eaglView];
 
-    CCScene *scene = [CCScene node];
+    //CCScene *scene = [CCScene node];
     
-	CCLayer *layer = [HelloWorld node];
-	[scene addChild:layer];
+	//CCLayer *layer = [HelloWorld node];
+	//[scene addChild:layer];
     //[director runWithScene: scene];
-	[director pushScene: scene];
+	CCScene *scene = [HelloWorld scene];
+    [director pushScene: scene];
 
 }
 

@@ -9,9 +9,19 @@
 #import "HelloWorld.h"
 
 @implementation HelloWorld
--(id) init
+
++(id) scene{
+	CCScene *scene = [CCScene node];	
+    HUDLayer *hud = [HUDLayer node];
+    [scene addChild:hud z:-1];
+	HelloWorld *layer = [[HelloWorld alloc] initWithHUD:hud];	
+	[scene addChild: layer];	
+	return scene;
+}
+-(id)initWithHUD:(HUDLayer *)hud
 {
 	if( (self=[super init] )) {
+        _hud = hud;
 		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
 		CGSize size = [[CCDirector sharedDirector] winSize];
 		label.position =  ccp( size.width /2 , size.height/2 );

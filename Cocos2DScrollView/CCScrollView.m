@@ -15,7 +15,7 @@
     //NSLog(@"scrolled");
     CGPoint dragPt = [scrollView contentOffset];
     CCScene* currentScene = [[CCDirector sharedDirector] runningScene];
-    CCLayer* topLayer = (CCLayer *)[currentScene.children objectAtIndex:0];
+    CCLayer* topLayer = (CCLayer *)[currentScene.children objectAtIndex:1];
     dragPt.x = dragPt.x * -1;
     [topLayer setPosition:dragPt];
 }

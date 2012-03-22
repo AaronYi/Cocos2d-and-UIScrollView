@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652A1F97151AD3BA000C35A5 /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A1F96151AD3BA000C35A5 /* HUDLayer.m */; };
 		6541BE3614CB3CFF00194FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3514CB3CFF00194FB3 /* UIKit.framework */; };
 		6541BE3814CB3CFF00194FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3714CB3CFF00194FB3 /* Foundation.framework */; };
 		6541BE3A14CB3CFF00194FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541BE3914CB3CFF00194FB3 /* CoreGraphics.framework */; };
@@ -415,6 +416,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652A1F95151AD3BA000C35A5 /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDLayer.h; sourceTree = "<group>"; };
+		652A1F96151AD3BA000C35A5 /* HUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDLayer.m; sourceTree = "<group>"; };
 		6541BE3114CB3CFF00194FB3 /* Cocos2DScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2DScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6541BE3514CB3CFF00194FB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6541BE3714CB3CFF00194FB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -481,6 +484,8 @@
 		6541BE2614CB3CFF00194FB3 = {
 			isa = PBXGroup;
 			children = (
+				652A1F95151AD3BA000C35A5 /* HUDLayer.h */,
+				652A1F96151AD3BA000C35A5 /* HUDLayer.m */,
 				6541BE3B14CB3CFF00194FB3 /* Cocos2DScrollView */,
 				6541BE3414CB3CFF00194FB3 /* Frameworks */,
 				6541BE3214CB3CFF00194FB3 /* Products */,
@@ -1087,6 +1092,7 @@
 				6541BE4914CB3CFF00194FB3 /* ViewController.m in Sources */,
 				6541BFA114CB684600194FB3 /* CCScrollView.m in Sources */,
 				6541BFDF14CB696200194FB3 /* HelloWorld.m in Sources */,
+				652A1F97151AD3BA000C35A5 /* HUDLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
