@@ -38,7 +38,7 @@
 	CCDirector *director = [CCDirector sharedDirector];    
     
 	// Turn on multiple touches
-	EAGLView *eaglView = [director openGLView];
+	CCGLView *eaglView = (CCGLView*)[director view];
 	[eaglView setMultipleTouchEnabled:YES];
     
     scrollView = [[CCScrollView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
@@ -53,7 +53,8 @@
     
 	CCLayer *layer = [HelloWorld node];
 	[scene addChild:layer];
-    [director runWithScene: scene];
+    //[director runWithScene: scene];
+	[director pushScene: scene];
 
 }
 

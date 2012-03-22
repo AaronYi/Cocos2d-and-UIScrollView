@@ -28,7 +28,7 @@
     if (!self.dragging)
     {
         [self.nextResponder touchesBegan: touches withEvent:event];
-        [[[CCDirector sharedDirector] openGLView] touchesBegan:touches withEvent:event];
+        [[[CCDirector sharedDirector] view] touchesBegan:touches withEvent:event];
     }
     
     [super touchesBegan: touches withEvent: event];
@@ -40,7 +40,7 @@
     if (!self.dragging)
     {
         [self.nextResponder touchesEnded: touches withEvent:event];
-        [[[CCDirector sharedDirector] openGLView] touchesEnded:touches withEvent:event];
+        [[[CCDirector sharedDirector] view] touchesEnded:touches withEvent:event];
     }
     
     [super touchesEnded: touches withEvent: event];

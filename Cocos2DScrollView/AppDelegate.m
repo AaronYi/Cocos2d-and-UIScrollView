@@ -53,13 +53,13 @@
 	viewController = [[ViewController alloc] init];
 	viewController.wantsFullScreenLayout = YES;
     //NSLog(@"window bounds: %f, %f", [window bounds].size.width, [window bounds].size.height);
-	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
+	CCGLView *glView = [CCGLView viewWithFrame:[window bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
 								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
 						];
 	
 	// attach the openglView to the director
-	[director setOpenGLView:glView];
+	[director setView:glView];
 	
     //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
 	if( ! [director enableRetinaDisplay:YES] )
@@ -67,8 +67,7 @@
 	
 	//[director setDeviceOrientation:kCCDeviceOrientationPortrait];
     [director setAnimationInterval:1.0/60];
-	[director setDisplayStats:kCCDirectorStatsFPS];
-	
+	//[director setDisplayStats:YES];
 	
 	// make the OpenGLView a child of the view controller
 	//[viewController setView:glView];
